@@ -11,7 +11,6 @@ cap.set(10, 150)
 
 myColors =[[14, 62, 170, 46, 255, 255], #yellow
            [77, 58, 70, 95, 255, 255]] #green
-           # [120, 61, 0, 152, 255, 255]] #pink
 
 myColorValues = [[0, 255, 255], #fluorescent yellow in BGR
                  [0, 255, 0]] #fluroescent green in BGR
@@ -42,7 +41,7 @@ def getContours(img):
         area = cv2.contourArea(cnt)
         if area > 500: #area limit to avoid noise
             perimeter = cv2.arcLength(cnt, True) #param: (contour, is_closed)
-            #approximate # of corners: .approxPolyDP params: (img, resolution, is_closed)
+            #approximate num of corners: .approxPolyDP params: (img, resolution, is_closed)
             approx = cv2.approxPolyDP(cnt, 0.01*perimeter, True)
             x, y, w, h = cv2.boundingRect(approx) #dimensions
     return x+w//2,y  #centre and top of bounding box (int)
