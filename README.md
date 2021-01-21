@@ -4,6 +4,6 @@ A project created using the OpenCV and NumPy libraries in order to create a modu
 
 ## Demo
 
-![] (color_picker.gif)
+! [] (color_picker.gif)
 
-![] (virtual_paint.gif)
+! [] (virtual_paint.gif)
